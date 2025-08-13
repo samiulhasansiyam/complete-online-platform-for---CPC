@@ -18,6 +18,7 @@
 
         /* Container for the announcement blocks */
         .announcement-container {
+            margin-top: 60px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
@@ -86,9 +87,173 @@
         .read-more:hover {
             color: #2563eb;
         }
+ /* Navigation bar styling */
+.nav {
+    background-color: #161b22; /* Darker background for nav */
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-container {
+    display: flex; /* Flexbox use kora hoyeche */
+    justify-content:space-between; /* Element gulo du-dike choriye thakbe */
+    align-items: center; /* Element gulo vertically center-e thakbe */
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; /* Circle shape */
+    margin-right: 0.5rem;
+}
+
+.nav-logo-text {
+    font-size: 1.25rem; /* Text size */
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex; /* Links gulo ek-line-e thakar jonne */
+    list-style: none; /* List bullet point remove kora hoyeche */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 1.5rem; /* Link gulo-r moddhe space */
+}
+
+.nav-links a {
+    color: #e6edf3; /* Link color */
+    text-decoration: none; /* Underline remove kora hoyeche */
+    transition: color 0.3s ease; /* Hover effect */
+}
+
+.nav-links a:hover {
+    color: #58a6ff; /* Hover color */
+}
+.footer {
+    background-color: #161b22; /* Footer-er jonne darker background */
+    padding: 0.5rem ;
+    font-size: 0.9rem;
+    position:absolute ;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.footer-container {
+    
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid; /* Grid layout use kora hoyeche */
+    grid-template-columns: 1fr 1fr 1fr; /* Desktop-er jonne 3 ta column */
+    gap: 2rem;
+}
+
+/* Individual column styling */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #e6edf3;
+}
+
+/* Contact Info styling */
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info p span {
+    margin-right: 0.5rem;
+}
+
+/* Links list styling */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    color: #a3aeb9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #58a6ff;
+}
+
+/* Social Media styling */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Copyright section styling */
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #30363d;
+    color: #6a737d;
+}
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Mobile-e shob column ek-er niche ek thakbe */
+        text-align: center;
+    }
+
+    .footer-column {
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
     </style>
 </head>
 <body>
+    <nav class="nav">
+        <div class="nav-container container">
+            <div class="nav-logo">
+                <img src="/image/476999958_1631682697643726_3529714320590287257_n-removebg-preview (1).png" alt="DIU CPC Logo">
+                <span class="nav-logo-text">DIU CPC</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/Event/Event.html">Event</a></li>
+                <li><a href="/anouncement/anouncement.html">Announcements</a></li>
+                <li><a href="/login/index.html">Login</a></li>
+                <li><a href="/registration/registration.html">Registration</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="announcement-container">
 
@@ -119,6 +284,50 @@
             <span class="read-more">Read More &rarr;</span>
         </a>
     </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column contact-info">
+                <h3 class="text-xl font-bold mb-4">DIU CPC</h3>
+                <p><span class="mr-2">📍</span> Satarkul, Dhaka Division, Bangladesh</p>
+                <p>
+                    <span class="mr-2">✉️</span> 
+                    <a href="mailto:diucsecpc.official@gmail.com">Official: diucsecpc.official@gmail.com</a>
+                </p>
+                <p>
+                    <span class="mr-2">📞</span> 
+                    <a href="tel:+8801516584966">Helpline: +8801516-584966</a>
+                </p>
+                <p class="ml-6">(Available: 10AM - 5PM)</p>
+            </div>
+    
+            <div class="footer-column">
+                <h3 class="text-xl font-bold mb-4">Useful Links</h3>
+                <ul>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3 class="text-xl font-bold mb-4">Social Media Links</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/diucsecpc"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+    
+                <h3 class="text-xl font-bold mb-4">Download App</h3>
+                <a href="https://play.google.com/store/apps/details?id=ac.diu.diu_app">
+                    <img src="/image/download.png" alt="Google Play" class="h-12">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 DIU CPC. All Rights Reserved.
+        </div>
+    </footer>
 
 </body>
 </html>

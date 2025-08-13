@@ -103,3 +103,19 @@ input:focus {
 .register-text a:hover {
     text-decoration: underline;
 }
+/* Add this to your styles.css file */
+
+.forgot-password-link {
+    text-align: right;
+    margin-top: 5px;
+}
+
+.forgot-password-link a {
+    color: #94a3b8; /* Same color as the register text */
+    font-size: 12px; /* Smaller font size */
+    text-decoration: none;
+}
+
+.forgot-password-link a:hover {
+    text-decoration: underline;
+}

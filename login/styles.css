@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login-container {
+    background: #111827;
+    padding: 30px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* New style for the message div */
+#message {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+}
+.message-success {
+    background-color: #153f3f;
+    color: #4ade80;
+}
+.message-error {
+    background-color: #451a25;
+    color: #f87171;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #cbd5e1;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #0b1220;
+    color: #f1f5f9;
+}
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn.primary {
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.btn.google {
+    background: #db4437;
+    color: white;
+}
+.btn.facebook {
+    background: #1877f2;
+    color: white;
+}
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    color: #94a3b8;
+    font-size: 14px;
+}
+.register-text {
+    margin-top: 18px;
+    font-size: 14px;
+    text-align: center;
+    color: #94a3b8;
+}
+.register-text a {
+    color: #2563eb;
+    text-decoration: none;
+}
+.register-text a:hover {
+    text-decoration: underline;
+}

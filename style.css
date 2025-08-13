@@ -3,13 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles, if any, can be added here */
-.container {
-    max-width: 1200px;
-}
-/* style.css */
-
-/* Basic body styling for background color and font */
+/* Custom styles for the overall layout */
 body {
     background-color: #0d1117; /* Dark background */
     color: #e6edf3; /* Light text color */
@@ -24,7 +18,7 @@ body {
     padding: 0 1rem;
 }
 
-/* Navigation bar styling */
+/* -------------------- Navigation Bar Styling -------------------- */
 .nav {
     background-color: #161b22; /* Darker background for nav */
     padding: 1rem 0;
@@ -73,7 +67,8 @@ body {
 .nav-links a:hover {
     color: #58a6ff; /* Hover color */
 }
-/* Footer Styling */
+
+/* -------------------- Footer Styling -------------------- */
 .footer {
     background-color: #161b22; /* Footer-er jonne darker background */
     padding: 3rem 0;
@@ -84,8 +79,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
-    display: grid; /* Grid layout use kora hoyeche */
-    grid-template-columns: 1fr 1fr 1fr; /* Desktop-er jonne 3 ta column */
+    display: flex; /* Flexbox use kora hoyeche */
+    justify-content: space-between; /* Columns gulo evenly spaced thakbe */
     gap: 2rem;
 }
 
@@ -153,7 +148,7 @@ body {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .footer-container {
-        grid-template-columns: 1fr; /* Mobile-e shob column ek-er niche ek thakbe */
+        flex-direction: column; /* Mobile-e shob column ek-er niche ek thakbe */
         text-align: center;
     }
 
@@ -165,9 +160,10 @@ body {
         justify-content: center;
     }
 }
-/* Hero Section Styling */
+
+/* -------------------- Hero Section Styling -------------------- */
 .hero-section {
-    background-color: #0d1117; /* Light purple background */
+    background-color: #0d1117; 
     padding: 6rem 0;
     text-align: left;
     display: flex;
@@ -183,23 +179,23 @@ body {
 .hero-content h1 {
     font-size: 3.5rem;
     font-weight: bold;
-    color: #333;
+    color: #e6edf3;
     line-height: 1.2;
 }
 
 .hero-content h1 span {
-    color: #6a1b9a; /* Purple color for the word "Programmer" */
+    color: #6a1b9a;
 }
 
-.hero-content p:nth-of-type(1) { /* Targeting the "CSE Fundamentals" paragraph */
+.hero-content p:nth-of-type(1) {
     font-size: 1.5rem;
-    color: #666;
+    color: #e6edf3;
     margin-top: 1rem;
 }
 
-.hero-content p:nth-of-type(2) { /* Targeting the long description */
+.hero-content p:nth-of-type(2) {
     font-size: 1rem;
-    color: #777;
+    color: #a3aeb9;
     margin-top: 1rem;
 }
 

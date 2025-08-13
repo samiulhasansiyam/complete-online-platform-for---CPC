@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Registration</title>
+    <link rel="stylesheet" href="registration.css">
+    <script>
+        // Password validation function
+        function validatePassword() {
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            const errorMsg = document.getElementById("errorMsg");
+
+            // Strong password policy: at least 8 characters, uppercase, lowercase, number, special char
+            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+            if (!regex.test(password)) {
+                errorMsg.textContent = "Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.";
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                errorMsg.textContent = "Passwords do not match.";
+                return false;
+            }
+
+            errorMsg.textContent = "";
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Membership Registration</h1>
+        <form action="submit_registration.php" method="post" onsubmit="return validatePassword()">
+
+            <!-- Full Name -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Phone -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <!-- Department -->
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" required>
+
+            <!-- Academic Year -->
+            <label for="year">Academic Year:</label>
+            <select id="year" name="year" required>
+                <option value="">Select Year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
+
+            <!-- Password -->
+            <label for="password">Create Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <!-- Confirm Password -->
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <p id="errorMsg" style="color: red; font-size: 0.9rem;"></p>
+
+            <!-- Submit -->
+            <button type="submit">Register</button>
+
+            <!-- Edit Option -->
+            <button type="button" onclick="alert('You can edit your details after logging in!')">Edit Registration Info</button>
+
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIU CPC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+
+   <nav class="nav">
+    <div class="nav-container container">
+        <div class="nav-logo">
+            <img src="image/476999958_1631682697643726_3529714320590287257_n-removebg-preview (1).png" alt="DIU CPC Logo">
+            <span class="nav-logo-text">DIU CPC</span>
+        </div>
+        <ul class="nav-links">
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Membership Registration</a></li>
+            <li><a href="#">Membership Login</a></li>
+            <li><a href="#">Event Management</a></li>
+            <li><a href="#">Announcements & News</a></li>
+        </ul>
+    </div>
+</nav>
+    <main class="container mx-auto p-4">
+
+
+        <section class="text-center py-20">
+            <h1 class="text-5xl font-bold mb-4">Welcome to DIU CPC Hackathon 2025! 🎉</h1>
+            <p class="text-xl">Your platform for all club activities and announcements.</p>
+        </section>
+
+  <section class="hero-section">
+    <div class="hero-content">
+        <h1>Build Your Foundation As A <br> <span>Programmer</span></h1>
+        <p>CSE Fundamentals with Diu CPC</p>
+        <p>Learn and Master Basic Programming, Data Structures, <br> Algorithm, OOP, Database and solve 500+ coding problems <br> to become an exceptionally well world-class Programmer.</p>
+        <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">Join Now</a>
+            <a href="#" class="btn btn-secondary" id="watch-video-btn">
+                <i class="fas fa-play-circle"></i> Watch Video
+            </a>
+        </div>
+    </div>
+</section>
+
+<div id="video-popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:100;">
+    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
+        <span id="close-btn" style="color:white; font-size:2rem; position:absolute; top:10px; right:10px; cursor:pointer;">&times;</span>
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1CpvNQLT4Q%2F&width=560&show_text=false&height=315" 
+        width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
+    </div>
+</div>
+
+        <section class="my-10">
+            <h2 class="text-3xl font-bold text-center mb-6">Upcoming Events</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">Hackathon 2025</h3>
+                    <p class="mt-2">Date: Aug 15, 2025</p>
+                    <p>Venue: DIU Auditorium</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">Web Dev Workshop</h3>
+                    <p class="mt-2">Date: Aug 25, 2025</p>
+                    <p>Venue: Online</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-10">
+            <h2 class="text-3xl font-bold text-center mb-6">Latest Announcements</h2>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold">New Membership Drive is Live!</h3>
+                <p class="mt-2">Sign up now to join the club and participate in events.</p>
+            </div>
+        </section>
+        <script>
+        const watchVideoBtn = document.getElementById('watch-video-btn');
+        const videoPopup = document.getElementById('video-popup');
+        const closeBtn = document.getElementById('close-btn');
+
+        watchVideoBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevents the default anchor tag action
+            videoPopup.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            videoPopup.style.display = 'none';
+        });
+    </script>
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column contact-info">
+            <h3 class="text-xl font-bold mb-4">DIU CPC</h3>
+            <p><span class="mr-2">📍</span> Satarkul, Dhaka Division, Bangladesh</p>
+<p>
+    <span class="mr-2">✉️</span> 
+    <a href="mailto:diucsecpc.official@gmail.com">Official: diucsecpc.official@gmail.com</a>
+</p>
+<p>
+    <span class="mr-2">📞</span> 
+    <a href="tel:+8801516584966">Helpline: +8801516-584966</a>
+</p>
+<p class="ml-6">(Available: 10AM - 5PM)</p>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="text-xl font-bold mb-4">Useful Links</h3>
+            <ul>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="text-xl font-bold mb-4">Social Media Links</h3>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <h3 class="text-xl font-bold mb-4">Download App</h3>
+            <a href="https://play.google.com/store/apps/details?id=ac.diu.diu_app">
+    <img src="/image/download.png" alt="Google Play" class="h-12">
+</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2025 DIU CPC. All Rights Reserved.
+    </div>
+</footer>
+
+</body>
+</html>

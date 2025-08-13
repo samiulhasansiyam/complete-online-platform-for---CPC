@@ -1,0 +1,242 @@
+/* style.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles, if any, can be added here */
+.container {
+    max-width: 1200px;
+}
+/* style.css */
+
+/* Basic body styling for background color and font */
+body {
+    background-color: #0d1117; /* Dark background */
+    color: #e6edf3; /* Light text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Container to center content and add padding */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Navigation bar styling */
+.nav {
+    background-color: #161b22; /* Darker background for nav */
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex; /* Flexbox use kora hoyeche */
+    justify-content: space-between; /* Element gulo du-dike choriye thakbe */
+    align-items: center; /* Element gulo vertically center-e thakbe */
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; /* Circle shape */
+    margin-right: 0.5rem;
+}
+
+.nav-logo-text {
+    font-size: 1.25rem; /* Text size */
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex; /* Links gulo ek-line-e thakar jonne */
+    list-style: none; /* List bullet point remove kora hoyeche */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 1.5rem; /* Link gulo-r moddhe space */
+}
+
+.nav-links a {
+    color: #e6edf3; /* Link color */
+    text-decoration: none; /* Underline remove kora hoyeche */
+    transition: color 0.3s ease; /* Hover effect */
+}
+
+.nav-links a:hover {
+    color: #58a6ff; /* Hover color */
+}
+/* Footer Styling */
+.footer {
+    background-color: #161b22; /* Footer-er jonne darker background */
+    padding: 3rem 0;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid; /* Grid layout use kora hoyeche */
+    grid-template-columns: 1fr 1fr 1fr; /* Desktop-er jonne 3 ta column */
+    gap: 2rem;
+}
+
+/* Individual column styling */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #e6edf3;
+}
+
+/* Contact Info styling */
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info p span {
+    margin-right: 0.5rem;
+}
+
+/* Links list styling */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    color: #a3aeb9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #58a6ff;
+}
+
+/* Social Media styling */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Copyright section styling */
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #30363d;
+    color: #6a737d;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Mobile-e shob column ek-er niche ek thakbe */
+        text-align: center;
+    }
+
+    .footer-column {
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+/* Hero Section Styling */
+.hero-section {
+    background-color: #f0f2ff; /* Light purple background */
+    padding: 6rem 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    color: #6a1b9a; /* Purple color for the word "Programmer" */
+}
+
+.hero-content p:nth-of-type(1) { /* Targeting the "CSE Fundamentals" paragraph */
+    font-size: 1.5rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.hero-content p:nth-of-type(2) { /* Targeting the long description */
+    font-size: 1rem;
+    color: #777;
+    margin-top: 1rem;
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #6a1b9a;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #7b2fa6;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #6a1b9a;
+    border: 2px solid #6a1b9a;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+    background-color: #6a1b9a;
+    color: white;
+}

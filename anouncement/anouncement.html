@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoverable Announcement Blocks (Dark Theme)</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #0f172a; /* Updated background color */
+            color: #ffffff; /* Updated text color for contrast */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Container for the announcement blocks */
+        .announcement-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Styling for each announcement block */
+        .announcement-block {
+            background-color: #1e293b; /* A lighter shade of dark for the blocks */
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-decoration: none;
+            color: #ffffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Hover effect */
+        .announcement-block:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Block content styling */
+        .announcement-content {
+            padding: 24px;
+        }
+
+        .announcement-content .date {
+            font-size: 14px;
+            color: #94a3b8; /* Lighter text for the date */
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .announcement-content .title {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin: 0 0 10px 0;
+        }
+
+        .announcement-content .excerpt {
+            font-size: 16px;
+            color: #cbd5e1; /* Lighter text for the excerpt */
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        /* 'Read More' link styling */
+        .read-more {
+            display: block;
+            padding: 16px 24px;
+            text-align: right;
+            font-weight: 600;
+            color: #3b82f6; /* A contrasting blue for the link */
+            border-top: 1px solid #334155;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="announcement-container">
+
+        <a href="#" class="announcement-block">
+            <div class="announcement-content">
+                <p class="date">August 12, 2025</p>
+                <h3 class="title">New Feature: Dashboard Analytics</h3>
+                <p class="excerpt">We've launched a new analytics dashboard to help you track your progress and make data-driven decisions. Get started today!</p>
+            </div>
+            <span class="read-more">Read More &rarr;</span>
+        </a>
+
+        <a href="#" class="announcement-block">
+            <div class="announcement-content">
+                <p class="date">August 8, 2025</p>
+                <h3 class="title">Upcoming Webinar: "Mastering Your Workflow"</h3>
+                <p class="excerpt">Join our team of experts on August 20th for a deep dive into our most powerful productivity tools. Register now to secure your spot!</p>
+            </div>
+            <span class="read-more">Read More &rarr;</span>
+        </a>
+
+        <a href="#" class="announcement-block">
+            <div class="announcement-content">
+                <p class="date">July 29, 2025</p>
+                <h3 class="title">Maintenance Update: Improved Performance</h3>
+                <p class="excerpt">Our scheduled maintenance is complete. You can now enjoy a faster, more responsive experience across all our services.</p>
+            </div>
+            <span class="read-more">Read More &rarr;</span>
+        </a>
+    </div>
+
+</body>
+</html>
